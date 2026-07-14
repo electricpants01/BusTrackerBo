@@ -1,6 +1,10 @@
 ---
 import Card from '../ui/Card.astro';
-import { CHART_COLORS, CHART_DEFAULTS } from '../../lib/chart-config';
+import {
+	CHART_COLORS,
+	CHART_DEFAULTS,
+	OPERATOR_LINE_COLORS,
+} from '../../lib/chart-config';
 import type { DailyPrice } from '../../lib/prices';
 
 interface Props {
@@ -23,8 +27,32 @@ const labels = history.map((day) =>
 		new Date(`${day.date}T12:00:00`),
 	),
 );
-const values = history.map((day) => day.minPrice);
+
 const highlightIndex = highlightDate ? history.findIndex((day) => day.date === highlightDate) : -1;
+
+const operatorNames = [
+	...new Set(history.flatMap((day) => day.operators.map((operator) => operator.name))),
+].sort((a, b) => a.localeCompare(b, 'es'));
+
+const datasets = operatorNames.map((name, index) => {
+	const color = OPERATOR_LINE_COLORS[index % OPERATOR_LINE_COLORS.length];
+	return {
+		label: name,
+		color,
+		data: history.map((day) => {
+			const match = day.operators.find((operator) => operator.name === name);
+			return match?.price ?? null;
+		}),
+	};
+});
+
+const chartPayload = JSON.stringify({
+	labels,
+	datasets,
+	highlightIndex,
+	colors: CHART_COLORS,
+	prefix: CHART_DEFAULTS.currencyPrefix,
+});
 ---
 
 <Card class="overflow-hidden">
@@ -33,7 +61,7 @@ const highlightIndex = highlightDate ? history.findIndex((day) => day.date === h
 		{
 			hasData && (
 				<p class="text-sm text-text-muted">
-					Precio mínimo por día · {CHART_DEFAULTS.currencyPrefix}
+					Precio por operador · {CHART_DEFAULTS.currencyPrefix}
 				</p>
 			)
 		}
@@ -41,8 +69,12 @@ const highlightIndex = highlightDate ? history.findIndex((day) => day.date === h
 
 	{
 		hasData ? (
-			<div class="relative h-60 md:h-80">
-				<canvas id={chartId} aria-label="Gráfico de historial de precios" />
+			<div class="relative h-72 md:h-96">
+				<canvas
+					id={chartId}
+					data-chart={chartPayload}
+					aria-label="Gráfico de historial de precios por operador"
+				/>
 			</div>
 		) : (
 			<div class="flex h-60 items-center justify-center rounded-lg border border-dashed border-border bg-bg-page text-center text-text-muted md:h-80">
@@ -52,69 +84,4 @@ const highlightIndex = highlightDate ? history.findIndex((day) => day.date === h
 	}
 </Card>
 
-{
-	hasData && (
-		<script define:vars={{ chartId, labels, values, highlightIndex, colors: CHART_COLORS, prefix: CHART_DEFAULTS.currencyPrefix }}>
-			import { Chart } from 'chart.js/auto';
-
-			const canvas = document.getElementById(chartId);
-			if (!(canvas instanceof HTMLCanvasElement)) throw new Error('Chart canvas not found');
-
-			const pointRadius = values.map((_, index) => (index === highlightIndex ? 6 : 3));
-			const pointBackgroundColor = values.map((_, index) =>
-				index === highlightIndex ? colors.highlight : colors.point,
-			);
-
-			new Chart(canvas, {
-				type: 'line',
-				data: {
-					labels,
-					datasets: [
-						{
-							label: 'Precio mínimo',
-							data: values,
-							borderColor: colors.line,
-							backgroundColor: colors.fill,
-							fill: true,
-							tension: 0.35,
-							pointRadius,
-							pointBackgroundColor,
-							pointBorderColor: '#ffffff',
-							pointBorderWidth: 2,
-						},
-					],
-				},
-				options: {
-					responsive: true,
-					maintainAspectRatio: false,
-					plugins: {
-						legend: { display: false },
-						tooltip: {
-							callbacks: {
-								label(context) {
-									const value = context.parsed.y;
-									return `${prefix} ${value.toLocaleString('es-BO')}`;
-								},
-							},
-						},
-					},
-					scales: {
-						x: {
-							grid: { color: colors.grid },
-							ticks: { color: colors.text },
-						},
-						y: {
-							grid: { color: colors.grid },
-							ticks: {
-								color: colors.text,
-								callback(value) {
-									return `${prefix} ${value}`;
-								},
-							},
-						},
-					},
-				},
-			});
-		</script>
-	)
-}
+{hasData && <script src="./price-chart.client.ts" />}

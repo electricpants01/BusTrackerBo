@@ -1,13 +1,13 @@
 # CI/CD with GitHub Actions: BusTrackerBo
 
-Continuous integration and daily price data updates using GitHub Actions.
+Continuous integration and weekly price data updates using GitHub Actions.
 
 ## Overview
 
 | Workflow | Trigger | Purpose |
 |----------|---------|---------|
 | `build.yml` | Push/PR to `main` | Build Astro site, catch errors |
-| `fetch-prices.yml` | Daily cron + manual | Fetch bus prices, append to TXT, commit |
+| `fetch-prices.yml` | Weekly cron (Mon) + manual | Fetch bus prices, append to TXT, commit |
 | `deploy.yml` | Push to `main` (Phase 5) | Deploy static site |
 
 ## Workflow 1: Build (`build.yml`)
@@ -52,7 +52,7 @@ jobs:
 
 **Trigger**:
 
-- Schedule: `0 6 * * *` (daily at 06:00 UTC)
+- Schedule: `0 6 * * 1` (Mondays at 06:00 UTC)
 - Manual: `workflow_dispatch`
 
 | Step | Action |
@@ -69,7 +69,7 @@ jobs:
 name: Fetch Prices
 on:
   schedule:
-    - cron: "0 6 * * *"
+    - cron: "0 6 * * 1"
   workflow_dispatch:
 permissions:
   contents: write
@@ -93,7 +93,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/prices.txt
-          git diff --staged --quiet || git commit -m "chore(data): daily price update $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "chore(data): weekly price update $(date -u +%Y-%m-%d)"
           git push
 ```
 

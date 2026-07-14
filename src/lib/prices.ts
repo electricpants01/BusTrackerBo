@@ -125,6 +125,43 @@ export function getMinPriceForDate(
 	return match?.minPrice ?? null;
 }
 
+function travelDateToUtcMs(isoDate: string): number {
+	const [year, month, day] = isoDate.split('-').map(Number);
+	return Date.UTC(year, month - 1, day);
+}
+
+/**
+ * Min price for a travel day, or the nearest day we have in the file.
+ * Reference fares (Tickets Bolivia / Busbud) are often the same across dates;
+ * use this in the date carousel so tabs don't show "--" when only some days were fetched.
+ */
+export function getDisplayMinPriceForDate(
+	origin: string,
+	destination: string,
+	date: string,
+	filePath?: string,
+): number | null {
+	const exact = getMinPriceForDate(origin, destination, date, filePath);
+	if (exact !== null) return exact;
+
+	const history = getPriceHistory(origin, destination, 0, filePath);
+	if (history.length === 0) return null;
+
+	const targetMs = travelDateToUtcMs(date);
+	let closest = history[0];
+	let bestDistance = Math.abs(travelDateToUtcMs(closest.date) - targetMs);
+
+	for (const day of history.slice(1)) {
+		const distance = Math.abs(travelDateToUtcMs(day.date) - targetMs);
+		if (distance < bestDistance) {
+			bestDistance = distance;
+			closest = day;
+		}
+	}
+
+	return closest.minPrice;
+}
+
 export function getLatestFetch(
 	origin: string,
 	destination: string,

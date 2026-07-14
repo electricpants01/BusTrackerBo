@@ -4,8 +4,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import { upcomingIsoDates, utcTimestamp } from './lib/dates.mjs';
-import { appendPriceRows } from './lib/prices-file.mjs';
+import { resolveFetchTravelDates, utcTimestamp } from './lib/dates.mjs';
+import { appendPriceRows, getLatestTravelDate } from './lib/prices-file.mjs';
 import { readRoutesFile, syncBidirectionalRoutesFile } from './lib/routes.mjs';
 import { sleep } from './lib/http.mjs';
 import { SOURCE_REGISTRY, resolveSourceTag } from './lib/sources.mjs';
@@ -69,14 +69,15 @@ async function fetchFromSource(sourceName, origin, destination, travelDate, conf
 async function main() {
 	const cli = parseArgs(process.argv.slice(2));
 	const config = loadConfig();
-	const daysAhead = cli.daysAhead ?? config.daysAhead ?? 1;
+	const dayCount = cli.daysAhead ?? config.daysAhead ?? 7;
 	const fetchedAt = utcTimestamp();
 	const sources = config.sources ?? ['ticketsbolivia-travel', 'busbud'];
-	const dates = upcomingIsoDates(daysAhead);
-	const travelDate = dates[0];
 
-	if (!travelDate) {
-		console.error('Could not determine target travel date.');
+	const latestTravelDate = getLatestTravelDate();
+	const travelDates = resolveFetchTravelDates({ latestTravelDate, dayCount });
+
+	if (travelDates.length === 0) {
+		console.error('Could not determine travel date window.');
 		process.exit(1);
 	}
 
@@ -100,8 +101,13 @@ async function main() {
 		routes = routes.slice(0, routeLimit);
 	}
 
+	const windowLabel = `${travelDates[0]} → ${travelDates[travelDates.length - 1]} (${travelDates.length} days)`;
+	const anchorLabel = latestTravelDate
+		? `continuing after latest travel_date ${latestTravelDate}`
+		: 'no existing rows — starting from tomorrow';
+
 	console.log(
-		`Fetching ${routes.length} routes from ${sources.join(', ')} for travel date ${travelDate}…`,
+		`Fetching ${routes.length} routes from ${sources.join(', ')} for ${windowLabel} (${anchorLabel})…`,
 	);
 
 	let totalRows = 0;
@@ -111,17 +117,51 @@ async function main() {
 		const routeRows = [];
 
 		for (const sourceName of sources) {
-			const result = await fetchFromSource(sourceName, origin, destination, travelDate, config);
+			const handler = SOURCE_REGISTRY[sourceName];
+
+			if (handler.usesTravelDate) {
+				for (const travelDate of travelDates) {
+					const result = await fetchFromSource(sourceName, origin, destination, travelDate, config);
+					if (result.error) {
+						errors.push(`${sourceName} ${origin} → ${destination} ${travelDate}: ${result.error}`);
+					}
+
+					if (result.rows.length > 0) {
+						routeRows.push(
+							...rowsForDates(
+								fetchedAt,
+								origin,
+								destination,
+								[travelDate],
+								result.rows,
+								sourceName,
+							),
+						);
+					}
+				}
+				if (routeRows.length > 0) {
+					console.log(`  ✓ ${origin} → ${destination} [${sourceName}]: live dates fetched`);
+				}
+				continue;
+			}
+
+			const result = await fetchFromSource(
+				sourceName,
+				origin,
+				destination,
+				travelDates[0],
+				config,
+			);
 			if (result.error) {
 				errors.push(`${sourceName} ${origin} → ${destination}: ${result.error}`);
 			}
 
 			if (result.rows.length > 0) {
 				routeRows.push(
-					...rowsForDates(fetchedAt, origin, destination, [travelDate], result.rows, sourceName),
+					...rowsForDates(fetchedAt, origin, destination, travelDates, result.rows, sourceName),
 				);
 				console.log(
-					`  ✓ ${origin} → ${destination} [${sourceName}]: ${result.rows.length} operator(s)`,
+					`  ✓ ${origin} → ${destination} [${sourceName}]: ${result.rows.length} operator(s) × ${travelDates.length} day(s)`,
 				);
 			}
 		}

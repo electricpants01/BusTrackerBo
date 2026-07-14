@@ -1,10 +1,10 @@
 {
-	"daysAhead": 1,
+	"daysAhead": 7,
 	"delayMsBetweenRequests": 800,
 	"delayMsBetweenRoutes": 1000,
 	"failIfNoRows": true,
 	"maxRoutesPerRun": 0,
 	"sources": ["ticketsbolivia-travel", "busbud"],
-	"usdBobRate": 6.96,
+	"usdBobRate": 10,
 	"busbudClpDivisor": 1000
 }

@@ -86,11 +86,14 @@ Must match `src/lib/cities.ts`:
 
 Each GitHub Actions cron run:
 
-1. Target **one travel date**: tomorrow (`daysAhead: 1` in `fetch-config.json`).
-2. For each route in `data/routes.txt`, call every enabled source adapter.
-3. Append **one row per operator** found (multi-company) for that travel date.
-4. Set `fetched_at` to the current UTC timestamp.
-5. **Do not** duplicate the same price across 14 future dates in a single run — history grows because the cron runs daily and appends a new snapshot.
+1. Read **latest `travel_date`** already in `data/prices.txt`.
+2. Build the **next 7-day window** starting **the day after** that date (no overlap).
+3. If the file is empty, start from **tomorrow** for 7 days.
+4. For each route in `data/routes.txt`, call every enabled source adapter.
+5. Append **one row per operator × travel day** in the window.
+6. Set `fetched_at` to the current UTC timestamp.
+
+**Cron schedule:** once per week on **Mondays** (`0 6 * * 1` UTC). Each run extends the horizon by 7 new travel days without re-writing the same dates.
 
 Example after 7 daily runs for La Paz → Uyuni:
 

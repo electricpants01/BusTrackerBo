@@ -1,6 +1,6 @@
 ---
 import PriceBadge from './PriceBadge.astro';
-import { getMinPriceForDate, getUpcomingDates } from '../../lib/prices';
+import { getDisplayMinPriceForDate, getUpcomingDates } from '../../lib/prices';
 
 interface Props {
 	origin: string;
@@ -36,7 +36,7 @@ function buildHref(date: string): string {
 	<div class="flex min-w-max gap-2 border-b border-border pb-0">
 		{
 			dates.map((date) => {
-				const price = getMinPriceForDate(origin, destination, date);
+				const price = getDisplayMinPriceForDate(origin, destination, date);
 				const isSelected = date === selectedDate;
 
 				return (

@@ -2,7 +2,8 @@ name: Fetch Prices
 
 on:
   schedule:
-    - cron: '0 6 * * *'
+    # Every Monday 06:00 UTC (~02:00 Bolivia). Each run adds 7 new travel dates.
+    - cron: '0 6 * * 1'
   workflow_dispatch:
 
 permissions:
@@ -30,5 +31,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add data/prices.txt
-          git diff --staged --quiet || git commit -m "chore(data): daily price update $(date -u +%Y-%m-%d)"
+          git diff --staged --quiet || git commit -m "chore(data): weekly price update $(date -u +%Y-%m-%d)"
           git push

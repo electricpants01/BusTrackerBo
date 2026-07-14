@@ -39,23 +39,24 @@ flowchart LR
 
 GitHub Actions workflow `fetch-prices.yml` runs:
 
-- **Schedule**: `0 6 * * *` (06:00 UTC daily ≈ 02:00 Bolivia)
+- **Schedule**: `0 6 * * 1` (Mondays 06:00 UTC ≈ 02:00 Bolivia)
 - **Manual**: `workflow_dispatch` for on-demand runs
 
 ### 2. Fetch (`scripts/fetch-prices.mjs`)
 
 ```text
+Read latest travel_date from data/prices.txt
+  If found: fetch window = [latest+1 .. latest+7] (7 new days, no overlap)
+  If empty: fetch window = [tomorrow .. tomorrow+6]
 Read data/routes.txt
-  travel_date = tomorrow (daysAhead: 1)
   For each origin → destination pair:
-    For each enabled source (ticketsbolivia-travel, …):
-      Fetch all operators/prices for that route
-      Build one row per operator for travel_date
-      Append to data/prices.txt
+    For each enabled source (ticketsbolivia-travel, busbud, …):
+      Fetch operators/prices for that route
+      Append one row per operator × each day in the window
 Log: routes processed, rows appended, errors
 ```
 
-Each daily cron run adds a **new snapshot** (new `fetched_at`, new `travel_date` = that day's tomorrow). History accumulates via append — no need to fetch 14 days in one run.
+Each cron run extends or refreshes a **7-day travel window** anchored on the latest date already stored in `prices.txt`.
 
 **Error handling**:
 

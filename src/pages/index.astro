@@ -1,3 +1,10 @@
 ---
-return Astro.redirect(`${import.meta.env.BASE_URL}la-paz/uyuni/`);
+import RouteResults from '../components/route/RouteResults.astro';
+import { tomorrowIsoDate } from '../lib/dates';
+
+const origin = 'la-paz';
+const destination = 'uyuni';
+const date = tomorrowIsoDate();
 ---
+
+<RouteResults origin={origin} destination={destination} date={date} />

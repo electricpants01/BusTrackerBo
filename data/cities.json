@@ -1,0 +1,47 @@
+[
+	{
+		"slug": "santa-cruz",
+		"name": "Santa Cruz de la Sierra",
+		"ticketsBoliviaId": "15"
+	},
+	{
+		"slug": "la-paz",
+		"name": "La Paz",
+		"ticketsBoliviaId": "1"
+	},
+	{
+		"slug": "cochabamba",
+		"name": "Cochabamba",
+		"ticketsBoliviaId": "8"
+	},
+	{
+		"slug": "tarija",
+		"name": "Tarija",
+		"ticketsBoliviaId": "16"
+	},
+	{
+		"slug": "sucre",
+		"name": "Sucre",
+		"ticketsBoliviaId": "10"
+	},
+	{
+		"slug": "oruro",
+		"name": "Oruro",
+		"ticketsBoliviaId": "11"
+	},
+	{
+		"slug": "potosi",
+		"name": "Potosí",
+		"ticketsBoliviaId": "9"
+	},
+	{
+		"slug": "trinidad",
+		"name": "Trinidad",
+		"ticketsBoliviaId": "85"
+	},
+	{
+		"slug": "uyuni",
+		"name": "Uyuni",
+		"ticketsBoliviaId": "17"
+	}
+]

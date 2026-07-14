@@ -2,7 +2,7 @@
 import Button from '../ui/Button.astro';
 import Card from '../ui/Card.astro';
 import Icon from '../ui/Icon.astro';
-import CityInput from './CityInput.astro';
+import CityCombobox from './CityCombobox.astro';
 import DatePicker from './DatePicker.astro';
 import SwapButton from './SwapButton.astro';
 
@@ -21,19 +21,19 @@ const {
 } = Astro.props;
 ---
 
-<Card elevated padding="sm" class="overflow-hidden p-0">
+<Card elevated padding="sm" class="relative z-20 overflow-visible p-0">
 	<form
 		id="search-form"
 		method="get"
 		action={action}
-		class="flex flex-col lg:flex-row lg:items-stretch lg:divide-x lg:divide-border"
+		class="flex flex-col overflow-visible lg:flex-row lg:items-stretch lg:divide-x lg:divide-border"
 	>
-		<div class="flex flex-col divide-y divide-border sm:flex-row sm:divide-x sm:divide-y-0 lg:flex-1">
-			<CityInput label="Origen" name="origin" value={origin} />
+		<div class="flex flex-col divide-y divide-border overflow-visible sm:flex-row sm:divide-x sm:divide-y-0 lg:flex-1">
+			<CityCombobox label="Origen" name="origin" value={origin} />
 			<div class="flex items-center justify-center px-2 py-2 sm:px-0 sm:py-0">
 				<SwapButton formId="search-form" />
 			</div>
-			<CityInput label="Destino" name="destination" value={destination} />
+			<CityCombobox label="Destino" name="destination" value={destination} />
 			<DatePicker value={date} />
 		</div>
 		<div class="border-t border-border p-3 lg:border-t-0 lg:p-2">
@@ -46,15 +46,14 @@ const {
 </Card>
 
 <script>
-	import { CITIES } from '../../lib/cities';
+	import { getSlugFromName } from '../../lib/cities';
 
 	function syncAllSlugs(form) {
-		const nameToSlug = new Map(CITIES.map((city) => [city.name, city.slug]));
 		form.querySelectorAll('[data-slug-input]').forEach((textInput) => {
 			const key = textInput.getAttribute('data-slug-input');
 			const hiddenInput = form.querySelector(`[data-slug-hidden="${key}"]`);
 			if (!(textInput instanceof HTMLInputElement) || !(hiddenInput instanceof HTMLInputElement)) return;
-			const slug = nameToSlug.get(textInput.value.trim());
+			const slug = getSlugFromName(textInput.value.trim());
 			hiddenInput.value = slug ?? textInput.value.trim().toLowerCase().replace(/\s+/g, '-');
 		});
 	}

@@ -1,0 +1,9 @@
+{
+	"daysAhead": 14,
+	"delayMsBetweenRequests": 2000,
+	"delayMsBetweenRoutes": 1500,
+	"failIfNoRows": false,
+	"maxRoutesPerRun": 0,
+	"sources": ["ticketsbolivia"],
+	"usdBobRate": 6.96
+}

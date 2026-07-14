@@ -1,0 +1,98 @@
+{
+  "ranAt": "2026-07-14T13:00:37.433Z",
+  "ticketsBoliviaScraper": [
+    {
+      "route": "la-paz → cochabamba",
+      "date": "2026-07-15",
+      "rowCount": 0,
+      "rows": [],
+      "error": null
+    },
+    {
+      "route": "la-paz → uyuni",
+      "date": "2026-07-20",
+      "rowCount": 0,
+      "rows": [],
+      "error": null
+    },
+    {
+      "route": "santa-cruz → tarija",
+      "date": "2026-07-15",
+      "rowCount": 0,
+      "rows": [],
+      "error": null
+    },
+    {
+      "route": "cochabamba → santa-cruz",
+      "date": "2026-07-16",
+      "rowCount": 0,
+      "rows": [],
+      "error": null
+    },
+    {
+      "route": "uyuni → sucre",
+      "date": "2026-07-18",
+      "rowCount": 0,
+      "rows": [],
+      "error": null
+    }
+  ],
+  "ticketsBoliviaHtml": [
+    {
+      "route": "la-paz → cochabamba",
+      "date": "2026-07-15",
+      "status": 200,
+      "htmlLength": 44198,
+      "nottrip": 1,
+      "searchBlocks": 0,
+      "parsedRows": 0,
+      "sampleRows": [],
+      "heading": "Following tickets were found for the 1st journey:"
+    },
+    {
+      "route": "la-paz → uyuni",
+      "date": "2026-07-20",
+      "status": 200,
+      "htmlLength": 43934,
+      "nottrip": 1,
+      "searchBlocks": 0,
+      "parsedRows": 0,
+      "sampleRows": [],
+      "heading": "Following tickets were found for the 1st journey:"
+    }
+  ],
+  "alternateUrls": [
+    {
+      "label": "Busbud SC-Tarija",
+      "url": "https://www.busbud.com/es/bo/bus/santa-cruz/tarija",
+      "status": 404,
+      "length": 91212,
+      "hasPrice": true,
+      "blocked": true,
+      "title": "¡Lo sentimos! Algo fue mal o no hemos podido encontrar lo que estabas buscando."
+    },
+    {
+      "label": "Busbud LP-CBB",
+      "url": "https://www.busbud.com/es/bo/bus/la-paz/cochabamba",
+      "status": 404,
+      "length": 91212,
+      "hasPrice": true,
+      "blocked": true,
+      "title": "¡Lo sentimos! Algo fue mal o no hemos podido encontrar lo que estabas buscando."
+    },
+    {
+      "label": "Trans Copacabana",
+      "url": "https://www.transcopacabana.com/",
+      "error": "The operation was aborted due to timeout"
+    },
+    {
+      "label": "Tickets Bolivia travel LP-CBB",
+      "url": "https://www.ticketsbolivia.com/travel-by-bus/la_paz-cochabamba.php",
+      "status": 200,
+      "length": 72599,
+      "hasPrice": true,
+      "blocked": false,
+      "title": "Bus tickets from La Paz to Cochabamba- buy online with Tickets Bolivia"
+    }
+  ]
+}

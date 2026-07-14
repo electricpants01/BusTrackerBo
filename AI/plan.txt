@@ -51,7 +51,13 @@ PHASE 4 — Daily price fetch (GitHub Actions)
 [x] Add .github/workflows/fetch-prices.yml — daily cron + workflow_dispatch
 [x] Document secrets in cicd-github-actions.md (if API keys needed)
 
-Note: fetch-prices.mjs uses deterministic mock prices until real scraper/API is wired.
+Note: fetch-prices.mjs scrapes Tickets Bolivia (ticketsbolivia) — no mock fallback.
+
+[x] data/cities.json — single source of truth for city slugs + Tickets Bolivia IDs
+[x] search/CityCombobox.astro — shows all cities on focus (replaces datalist CityInput)
+[x] scripts/sources/ticketsbolivia.mjs — real website scraper
+[x] scripts/lib/routes.mjs — 72 bidirectional routes (9 cities × 8 directions)
+[ ] Add more operator source adapters (SAMA, Trans Copacabana, etc.)
 
 ────────────────────────────────────────────────────────────
 PHASE 5 — Polish & deploy
@@ -61,8 +67,7 @@ PHASE 5 — Polish & deploy
 [x] Spanish copy pass on all UI strings
 [ ] Add .github/workflows/deploy.yml — GitHub Pages or Netlify
 [ ] Production smoke test on real route
-[ ] Replace mock fetch with real Busbud/operator data source
-
+[x] Replace mock fetch with real website scraper (Tickets Bolivia)
 ────────────────────────────────────────────────────────────
 OUT OF SCOPE (v1)
 ────────────────────────────────────────────────────────────

@@ -1,21 +1,15 @@
+import citiesData from '../../data/cities.json';
+
 export interface City {
 	slug: string;
 	name: string;
+	ticketsBoliviaId?: string;
 }
 
-export const CITIES: City[] = [
-	{ slug: 'santa-cruz', name: 'Santa Cruz de la Sierra' },
-	{ slug: 'la-paz', name: 'La Paz' },
-	{ slug: 'cochabamba', name: 'Cochabamba' },
-	{ slug: 'tarija', name: 'Tarija' },
-	{ slug: 'sucre', name: 'Sucre' },
-	{ slug: 'oruro', name: 'Oruro' },
-	{ slug: 'potosi', name: 'Potosí' },
-	{ slug: 'trinidad', name: 'Trinidad' },
-	{ slug: 'uyuni', name: 'Uyuni' },
-];
+export const CITIES: City[] = citiesData as City[];
 
 const cityMap = new Map(CITIES.map((city) => [city.slug, city]));
+const nameToSlug = new Map(CITIES.map((city) => [city.name, city.slug]));
 
 export function getCity(slug: string): City | undefined {
 	return cityMap.get(slug);
@@ -31,4 +25,29 @@ export function isValidCitySlug(slug: string): boolean {
 
 export function getAllCitySlugs(): string[] {
 	return CITIES.map((city) => city.slug);
+}
+
+export function getSlugFromName(name: string): string | undefined {
+	return nameToSlug.get(name.trim());
+}
+
+export function getTicketsBoliviaId(slug: string): string | undefined {
+	return cityMap.get(slug)?.ticketsBoliviaId;
+}
+
+export function normalizeCityQuery(value: string): string {
+	return value
+		.trim()
+		.toLowerCase()
+		.normalize('NFD')
+		.replace(/\p{M}/gu, '');
+}
+
+export function filterCities(query: string): City[] {
+	const normalized = normalizeCityQuery(query);
+	if (!normalized) return CITIES;
+
+	return CITIES.filter((city) =>
+		normalizeCityQuery(city.name).includes(normalized),
+	);
 }

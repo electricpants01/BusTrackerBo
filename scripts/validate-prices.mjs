@@ -4,21 +4,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { getCitySlugs } from './lib/cities.mjs';
+
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.join(__dirname, '..');
 const pricesPath = path.join(rootDir, 'data/prices.txt');
 
-const VALID_CITIES = new Set([
-	'santa-cruz',
-	'la-paz',
-	'cochabamba',
-	'tarija',
-	'sucre',
-	'oruro',
-	'potosi',
-	'trinidad',
-	'uyuni',
-]);
+const VALID_CITIES = new Set(getCitySlugs());
+const DISALLOWED_SOURCES = new Set(['daily-fetch', 'mock', 'manual-seed']);
 
 function fail(message) {
 	console.error(`Validation error: ${message}`);
@@ -60,6 +53,9 @@ function validate() {
 		}
 		if (currency !== 'BOB') fail(`Currency must be BOB, got: ${currency}`);
 		if (!source.trim()) fail('Missing source');
+		if (DISALLOWED_SOURCES.has(source)) {
+			fail(`Disallowed mock source: ${source}`);
+		}
 
 		rowCount += 1;
 	}

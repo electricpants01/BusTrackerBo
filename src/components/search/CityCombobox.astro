@@ -1,0 +1,153 @@
+---
+import { CITIES, getCityName } from '../../lib/cities';
+
+interface Props {
+	label: string;
+	name: string;
+	value?: string;
+	placeholder?: string;
+}
+
+const {
+	label,
+	name,
+	value = '',
+	placeholder = 'Ciudad',
+} = Astro.props;
+
+const displayValue = getCityName(value) || value;
+const listId = `${name}-city-list`;
+---
+
+<label
+	class="city-combobox relative z-30 flex min-w-0 flex-1 flex-col gap-1 overflow-visible px-4 py-3"
+	data-combobox-root={name}
+>
+	<span class="text-xs font-medium text-text-muted">{label}</span>
+	<input
+		type="text"
+		value={displayValue}
+		placeholder={placeholder}
+		autocomplete="off"
+		spellcheck="false"
+		role="combobox"
+		aria-expanded="false"
+		aria-controls={listId}
+		aria-autocomplete="list"
+		data-slug-input={name}
+		class="w-full border-0 bg-transparent p-0 text-base text-text outline-none placeholder:text-text-muted"
+		required
+	/>
+	<input type="hidden" name={name} value={value} data-slug-hidden={name} />
+	<ul
+		id={listId}
+		role="listbox"
+		class="city-combobox-list absolute left-0 right-0 top-[calc(100%-0.25rem)] z-50 mt-1 hidden max-h-64 overflow-y-auto rounded-md border border-border bg-bg-card py-1 shadow-card"
+		data-combobox-list={name}
+	>
+		{
+			CITIES.map((city) => (
+				<li
+					role="option"
+					data-city-slug={city.slug}
+					data-city-name={city.name}
+					class="cursor-pointer px-3 py-2 text-sm text-text hover:bg-bg-page aria-selected:bg-banner-info"
+				>
+					{city.name}
+				</li>
+			))
+		}
+	</ul>
+</label>
+
+<script define:vars={{ name, cities: CITIES }}>
+	(() => {
+		const root = document.querySelector(`[data-combobox-root="${name}"]`);
+		const textInput = root?.querySelector(`[data-slug-input="${name}"]`);
+		const hiddenInput = root?.querySelector(`[data-slug-hidden="${name}"]`);
+		const list = root?.querySelector(`[data-combobox-list="${name}"]`);
+
+		if (!(root instanceof HTMLElement) || !(textInput instanceof HTMLInputElement) || !(hiddenInput instanceof HTMLInputElement) || !(list instanceof HTMLUListElement)) {
+			return;
+		}
+
+		const nameToSlug = new Map(cities.map((city) => [city.name, city.slug]));
+		const options = [...list.querySelectorAll('[data-city-slug]')];
+
+		function normalize(value) {
+			return value
+				.trim()
+				.toLowerCase()
+				.normalize('NFD')
+				.replace(/\p{M}/gu, '');
+		}
+
+		function syncSlugFromText() {
+			const slug = nameToSlug.get(textInput.value.trim());
+			hiddenInput.value = slug ?? textInput.value.trim().toLowerCase().replace(/\s+/g, '-');
+		}
+
+		function setSelection(slug, cityName) {
+			textInput.value = cityName;
+			hiddenInput.value = slug;
+			closeList();
+		}
+
+		function filterOptions() {
+			const query = normalize(textInput.value);
+			for (const option of options) {
+				if (!(option instanceof HTMLElement)) continue;
+				const cityName = option.dataset.cityName ?? '';
+				const matches = !query || normalize(cityName).includes(query);
+				option.hidden = !matches;
+				option.setAttribute('aria-selected', 'false');
+			}
+		}
+
+		function openList() {
+			filterOptions();
+			list.classList.remove('hidden');
+			textInput.setAttribute('aria-expanded', 'true');
+		}
+
+		function closeList() {
+			list.classList.add('hidden');
+			textInput.setAttribute('aria-expanded', 'false');
+			syncSlugFromText();
+		}
+
+		textInput.addEventListener('focus', openList);
+		textInput.addEventListener('input', () => {
+			openList();
+			syncSlugFromText();
+		});
+
+		textInput.addEventListener('keydown', (event) => {
+			if (event.key === 'Escape') {
+				closeList();
+				return;
+			}
+
+			if (event.key === 'Enter') {
+				const firstVisible = options.find((option) => option instanceof HTMLElement && !option.hidden);
+				if (firstVisible instanceof HTMLElement) {
+					event.preventDefault();
+					setSelection(firstVisible.dataset.citySlug ?? '', firstVisible.dataset.cityName ?? '');
+				}
+			}
+		});
+
+		list.addEventListener('mousedown', (event) => {
+			const option = event.target instanceof Element ? event.target.closest('[data-city-slug]') : null;
+			if (!(option instanceof HTMLElement)) return;
+			event.preventDefault();
+			setSelection(option.dataset.citySlug ?? '', option.dataset.cityName ?? '');
+		});
+
+		document.addEventListener('click', (event) => {
+			if (!root.contains(event.target instanceof Node ? event.target : null)) {
+				closeList();
+			}
+		});
+	})();
+</script>

@@ -128,10 +128,20 @@ The chart uses `travel_date` on the X axis; `fetched_at` tracks when we observed
 Enable multiple sources in `data/fetch-config.json`:
 
 ```json
-"sources": ["ticketsbolivia-travel", "ticketsbolivia"]
+"sources": ["ticketsbolivia-travel", "busbud"]
 ```
 
-Each source tag is stored in the `source` column for audit (`ticketsbolivia-travel`, `transcopacabana`, etc.).
+### 4. Busbud (implemented)
+
+| Field | Value |
+|-------|-------|
+| **URL pattern** | `https://www.busbud.com/es-mx/autobus-{origin}-{dest}/r/{geohash}-{geohash}` |
+| **Source tag** | `busbud` |
+| **Coverage** | Subset of Bolivia routes (e.g. Santa Cruz ↔ Tarija); returns empty when route not listed |
+| **Adapter** | `scripts/sources/busbud.mjs` |
+| **Notes** | Prices shown as CLP; converted via `busbudClpDivisor` (default 1000) × `usdBobRate` |
+
+Each source tag is stored in the `source` column for audit (`ticketsbolivia-travel`, `busbud`, etc.).
 
 ## Price Normalization
 

@@ -4,6 +4,7 @@
 	"delayMsBetweenRoutes": 1000,
 	"failIfNoRows": true,
 	"maxRoutesPerRun": 0,
-	"sources": ["ticketsbolivia-travel"],
-	"usdBobRate": 6.96
+	"sources": ["ticketsbolivia-travel", "busbud"],
+	"usdBobRate": 6.96,
+	"busbudClpDivisor": 1000
 }

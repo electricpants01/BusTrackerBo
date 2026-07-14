@@ -2,46 +2,64 @@
 	{
 		"slug": "santa-cruz",
 		"name": "Santa Cruz de la Sierra",
-		"ticketsBoliviaId": "15"
+		"ticketsBoliviaId": "15",
+		"busbudGeohash": "6sg4dx",
+		"busbudSlug": "santa-cruz-de-la-sierra"
 	},
 	{
 		"slug": "la-paz",
 		"name": "La Paz",
-		"ticketsBoliviaId": "1"
+		"ticketsBoliviaId": "1",
+		"busbudGeohash": "6mpd1h",
+		"busbudSlug": "la-paz"
 	},
 	{
 		"slug": "cochabamba",
 		"name": "Cochabamba",
-		"ticketsBoliviaId": "8"
+		"ticketsBoliviaId": "8",
+		"busbudGeohash": "6sbvn9",
+		"busbudSlug": "cochabamba"
 	},
 	{
 		"slug": "tarija",
 		"name": "Tarija",
-		"ticketsBoliviaId": "16"
+		"ticketsBoliviaId": "16",
+		"busbudGeohash": "6s1vx0",
+		"busbudSlug": "tarija"
 	},
 	{
 		"slug": "sucre",
 		"name": "Sucre",
-		"ticketsBoliviaId": "10"
+		"ticketsBoliviaId": "10",
+		"busbudGeohash": "6s9edu",
+		"busbudSlug": "sucre"
 	},
 	{
 		"slug": "oruro",
 		"name": "Oruro",
-		"ticketsBoliviaId": "11"
+		"ticketsBoliviaId": "11",
+		"busbudGeohash": "6sb38z",
+		"busbudSlug": "oruro"
 	},
 	{
 		"slug": "potosi",
 		"name": "Potosí",
-		"ticketsBoliviaId": "9"
+		"ticketsBoliviaId": "9",
+		"busbudGeohash": "6s90xf",
+		"busbudSlug": "potosi"
 	},
 	{
 		"slug": "trinidad",
 		"name": "Trinidad",
-		"ticketsBoliviaId": "85"
+		"ticketsBoliviaId": "85",
+		"busbudGeohash": "6t3ge5",
+		"busbudSlug": "trinidad"
 	},
 	{
 		"slug": "uyuni",
 		"name": "Uyuni",
-		"ticketsBoliviaId": "17"
+		"ticketsBoliviaId": "17",
+		"busbudGeohash": "6s27x7",
+		"busbudSlug": "uyuni"
 	}
 ]

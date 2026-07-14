@@ -21,7 +21,7 @@ const {
 } = Astro.props;
 
 const citySlugs = CITIES.map((city) => city.slug);
-const formAction = `${import.meta.env.BASE_URL}r/${origin}/${destination}/`;
+const formAction = `${import.meta.env.BASE_URL}${origin}/${destination}/`;
 ---
 
 <Card elevated padding="sm" class="relative z-20 overflow-visible p-0">
@@ -147,7 +147,7 @@ const formAction = `${import.meta.env.BASE_URL}r/${origin}/${destination}/`;
 				return;
 			}
 
-			form.action = `${baseUrl}r/${origin}/${destination}/`;
+			form.action = `${baseUrl}${origin}/${destination}/`;
 			hideError();
 		});
 	}

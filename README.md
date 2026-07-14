@@ -93,7 +93,7 @@ The site deploys automatically on push to `main` via [`.github/workflows/deploy-
 3. Push to `main` (or run the **Deploy GitHub Pages** workflow manually)
 4. Open `https://<your-username>.github.io/<repo-name>/`
 
-Example: `https://octocat.github.io/BusTrackerBo/r/santa-cruz/tarija/`
+Example: `https://octocat.github.io/BusTrackerBo/santa-cruz/tarija/`
 
 **After weekly price fetch:** pushing updated `prices.txt` to `main` triggers a rebuild, so the site shows new data.
 

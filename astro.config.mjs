@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite';
 // Set SITE_URL and BASE_PATH in CI; defaults work for local dev at /
 const site = process.env.SITE_URL || undefined;
 const rawBase = process.env.BASE_PATH || '/';
-// Astro BASE_URL must end with `/` or `${BASE_URL}r/...` becomes `/BusTrackerBor/...`
+// Astro BASE_URL must end with `/` or path joins can produce broken URLs.
 const base =
 	rawBase === '/' ? '/' : rawBase.endsWith('/') ? rawBase : `${rawBase}/`;
 

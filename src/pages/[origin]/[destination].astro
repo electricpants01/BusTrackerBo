@@ -1,10 +1,10 @@
 ---
-import RouteResults from '../../../components/route/RouteResults.astro';
-import { isValidCitySlug } from '../../../lib/cities';
-import { tomorrowIsoDate } from '../../../lib/dates';
+import RouteResults from '../../components/route/RouteResults.astro';
+import { isValidCitySlug } from '../../lib/cities';
+import { tomorrowIsoDate } from '../../lib/dates';
 
 export async function getStaticPaths() {
-	const { getAllCitySlugs } = await import('../../../lib/cities');
+	const { getAllCitySlugs } = await import('../../lib/cities');
 	const slugs = getAllCitySlugs();
 	const paths = [];
 
@@ -21,7 +21,7 @@ export async function getStaticPaths() {
 const { origin, destination } = Astro.params;
 
 if (!origin || !destination || !isValidCitySlug(origin) || !isValidCitySlug(destination)) {
-	return Astro.redirect(`${import.meta.env.BASE_URL}r/la-paz/uyuni/`);
+	return Astro.redirect(`${import.meta.env.BASE_URL}la-paz/uyuni/`);
 }
 
 const date = tomorrowIsoDate();

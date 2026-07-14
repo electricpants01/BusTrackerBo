@@ -29,7 +29,7 @@ function formatDay(date: string): string {
 function buildHref(date: string): string {
 	const base = import.meta.env.BASE_URL;
 	const params = new URLSearchParams({ date });
-	return `${base}r/${origin}/${destination}/?${params.toString()}`;
+	return `${base}${origin}/${destination}/?${params.toString()}`;
 }
 ---
 

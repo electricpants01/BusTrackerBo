@@ -1,0 +1,62 @@
+---
+import PriceBadge from './PriceBadge.astro';
+import { getMinPriceForDate, getUpcomingDates } from '../../lib/prices';
+
+interface Props {
+	origin: string;
+	destination: string;
+	selectedDate?: string;
+	daysAhead?: number;
+}
+
+const {
+	origin,
+	destination,
+	selectedDate = new Date().toISOString().slice(0, 10),
+	daysAhead = 7,
+} = Astro.props;
+
+const dates = getUpcomingDates(daysAhead);
+
+function formatWeekday(date: string): string {
+	return new Intl.DateTimeFormat('es-BO', { weekday: 'short' }).format(new Date(`${date}T12:00:00`));
+}
+
+function formatDay(date: string): string {
+	return new Intl.DateTimeFormat('es-BO', { day: 'numeric' }).format(new Date(`${date}T12:00:00`));
+}
+
+function buildHref(date: string): string {
+	const params = new URLSearchParams({ origin, destination, date });
+	return `/?${params.toString()}`;
+}
+---
+
+<div class="mb-6 overflow-x-auto">
+	<div class="flex min-w-max gap-2 border-b border-border pb-0">
+		{
+			dates.map((date) => {
+				const price = getMinPriceForDate(origin, destination, date);
+				const isSelected = date === selectedDate;
+
+				return (
+					<a
+						href={buildHref(date)}
+						class:list={[
+							'flex min-w-20 flex-col items-center rounded-t-lg px-4 py-3 transition-colors',
+							isSelected
+								? '-mb-px border border-b-0 border-border bg-bg-card shadow-[var(--shadow-card)]'
+								: 'text-text-muted hover:bg-bg-card/60',
+						]}
+					>
+						<span class="text-lg font-semibold text-text">{formatDay(date)}</span>
+						<span class="text-xs capitalize text-text-muted">{formatWeekday(date)}</span>
+						<div class="mt-1 h-5">
+							{price !== null ? <PriceBadge amount={price} /> : <span class="text-sm text-text-muted">--</span>}
+						</div>
+					</a>
+				);
+			})
+		}
+	</div>
+</div>

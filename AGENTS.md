@@ -1,3 +1,7 @@
+## Project docs
+
+Read [`AI/README.md`](AI/README.md) before feature work. For UI changes, also read [`AI/skills/ui-design-system.md`](AI/skills/ui-design-system.md).
+
 ## Development
 
 When starting the dev server, use background mode:

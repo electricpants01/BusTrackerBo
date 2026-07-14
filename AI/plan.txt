@@ -11,66 +11,57 @@ PHASE 0 — Documentation
 [x] AI/README.md — index and agent instructions
 [x] AI/plan.txt — this file
 [x] AI/skills/* — project, UI, data, CI docs
-[ ] Link root README.md and AGENTS.md to AI/
-
-Definition of done: All AI/skills files exist; agents can build without guessing.
+[x] Link root README.md and AGENTS.md to AI/
 
 ────────────────────────────────────────────────────────────
 PHASE 1 — Design system & base components
 ────────────────────────────────────────────────────────────
-[ ] Add Tailwind CSS (astro add tailwind)
-[ ] Create src/styles/tokens.css — design tokens from ui-design-system.md
-[ ] Implement ui/Button.astro, ui/Card.astro, ui/Icon.astro
-[ ] Implement layout/Header.astro, layout/Footer.astro
-[ ] Implement search/CityInput.astro, search/DatePicker.astro, search/SwapButton.astro
-[ ] Implement search/SearchBar.astro (composes above)
-
-Definition of done: Home page renders SearchBar with Busbud-like styling; no chart yet.
+[x] Add Tailwind CSS
+[x] Create src/styles/tokens.css — design tokens from ui-design-system.md
+[x] Implement ui/Button.astro, ui/Card.astro, ui/Icon.astro
+[x] Implement layout/Header.astro, layout/Footer.astro
+[x] Implement search/CityInput.astro, search/DatePicker.astro, search/SwapButton.astro
+[x] Implement search/SearchBar.astro (composes above)
 
 ────────────────────────────────────────────────────────────
 PHASE 2 — TXT database & parser
 ────────────────────────────────────────────────────────────
-[ ] Create data/routes.txt — seed routes (santa-cruz → tarija, etc.)
-[ ] Create data/prices.txt — header + sample seed rows for dev
-[ ] Implement src/lib/cities.ts — slug registry and display labels
-[ ] Implement src/lib/prices.ts — parse TXT, query by route/date
+[x] Create data/routes.txt — seed routes (santa-cruz → tarija, etc.)
+[x] Create data/prices.txt — header + sample seed rows for dev
+[x] Implement src/lib/cities.ts — slug registry and display labels
+[x] Implement src/lib/prices.ts — parse TXT, query by route/date
 [ ] Unit tests for prices.ts parser (optional but recommended)
-
-Definition of done: prices.ts returns history array for a route from prices.txt.
 
 ────────────────────────────────────────────────────────────
 PHASE 3 — Home page (search + chart)
 ────────────────────────────────────────────────────────────
-[ ] Add Chart.js dependency
-[ ] Implement prices/PriceChart.astro — line chart from price history
-[ ] Implement prices/PriceBadge.astro, prices/DatePriceCarousel.astro
-[ ] Wire index.astro: SearchBar → filter route → PriceChart
-[ ] Empty state when no data for route
-[ ] "Last updated" badge from latest fetched_at
-
-Definition of done: User selects Santa Cruz → Tarija and sees price chart from TXT data.
+[x] Add Chart.js dependency
+[x] Implement prices/PriceChart.astro — line chart from price history
+[x] Implement prices/PriceBadge.astro, prices/DatePriceCarousel.astro
+[x] Wire index.astro: SearchBar → filter route → PriceChart
+[x] Empty state when no data for route
+[x] "Last updated" badge from latest fetched_at
 
 ────────────────────────────────────────────────────────────
 PHASE 4 — Daily price fetch (GitHub Actions)
 ────────────────────────────────────────────────────────────
-[ ] Implement scripts/fetch-prices.mjs — read routes.txt, fetch prices, append prices.txt
-[ ] Implement scripts/validate-prices.mjs — schema check before commit
-[ ] Add .github/workflows/build.yml — npm ci, astro build on push/PR
-[ ] Add .github/workflows/fetch-prices.yml — daily cron + workflow_dispatch
-[ ] Document secrets in cicd-github-actions.md (if API keys needed)
+[x] Implement scripts/fetch-prices.mjs — read routes.txt, fetch prices, append prices.txt
+[x] Implement scripts/validate-prices.mjs — schema check before commit
+[x] Add .github/workflows/build.yml — npm ci, astro build on push/PR
+[x] Add .github/workflows/fetch-prices.yml — daily cron + workflow_dispatch
+[x] Document secrets in cicd-github-actions.md (if API keys needed)
 
-Definition of done: GHA runs daily, appends new rows to data/prices.txt, commits to main.
+Note: fetch-prices.mjs uses deterministic mock prices until real scraper/API is wired.
 
 ────────────────────────────────────────────────────────────
 PHASE 5 — Polish & deploy
 ────────────────────────────────────────────────────────────
-[ ] prices/OperatorRow.astro — cheapest operators list below chart
-[ ] ui/AlertBanner.astro — Bolivia travel notices (strikes, etc.)
-[ ] Spanish copy pass on all UI strings
+[x] prices/OperatorRow.astro — cheapest operators list below chart
+[x] ui/AlertBanner.astro — Bolivia travel notices (strikes, etc.)
+[x] Spanish copy pass on all UI strings
 [ ] Add .github/workflows/deploy.yml — GitHub Pages or Netlify
 [ ] Production smoke test on real route
-
-Definition of done: Public URL shows live price history updated daily.
+[ ] Replace mock fetch with real Busbud/operator data source
 
 ────────────────────────────────────────────────────────────
 OUT OF SCOPE (v1)

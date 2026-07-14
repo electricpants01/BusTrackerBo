@@ -1,0 +1,66 @@
+---
+import Button from '../ui/Button.astro';
+import Card from '../ui/Card.astro';
+import Icon from '../ui/Icon.astro';
+import CityInput from './CityInput.astro';
+import DatePicker from './DatePicker.astro';
+import SwapButton from './SwapButton.astro';
+
+interface Props {
+	origin?: string;
+	destination?: string;
+	date?: string;
+	action?: string;
+}
+
+const {
+	origin = 'santa-cruz',
+	destination = 'tarija',
+	date = new Date().toISOString().slice(0, 10),
+	action = '/',
+} = Astro.props;
+---
+
+<Card elevated padding="sm" class="overflow-hidden p-0">
+	<form
+		id="search-form"
+		method="get"
+		action={action}
+		class="flex flex-col lg:flex-row lg:items-stretch lg:divide-x lg:divide-border"
+	>
+		<div class="flex flex-col divide-y divide-border sm:flex-row sm:divide-x sm:divide-y-0 lg:flex-1">
+			<CityInput label="Origen" name="origin" value={origin} />
+			<div class="flex items-center justify-center px-2 py-2 sm:px-0 sm:py-0">
+				<SwapButton formId="search-form" />
+			</div>
+			<CityInput label="Destino" name="destination" value={destination} />
+			<DatePicker value={date} />
+		</div>
+		<div class="border-t border-border p-3 lg:border-t-0 lg:p-2">
+			<Button type="submit" class="h-full w-full min-h-12 lg:min-w-36">
+				<Icon name="search" size={18} />
+				Buscar
+			</Button>
+		</div>
+	</form>
+</Card>
+
+<script>
+	import { CITIES } from '../../lib/cities';
+
+	function syncAllSlugs(form) {
+		const nameToSlug = new Map(CITIES.map((city) => [city.name, city.slug]));
+		form.querySelectorAll('[data-slug-input]').forEach((textInput) => {
+			const key = textInput.getAttribute('data-slug-input');
+			const hiddenInput = form.querySelector(`[data-slug-hidden="${key}"]`);
+			if (!(textInput instanceof HTMLInputElement) || !(hiddenInput instanceof HTMLInputElement)) return;
+			const slug = nameToSlug.get(textInput.value.trim());
+			hiddenInput.value = slug ?? textInput.value.trim().toLowerCase().replace(/\s+/g, '-');
+		});
+	}
+
+	document.getElementById('search-form')?.addEventListener('submit', (event) => {
+		const form = event.target;
+		if (form instanceof HTMLFormElement) syncAllSlugs(form);
+	});
+</script>

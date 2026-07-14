@@ -1,0 +1,49 @@
+---
+import Icon from '../ui/Icon.astro';
+
+interface Props {
+	formId?: string;
+}
+
+const { formId = 'search-form' } = Astro.props;
+---
+
+<button
+	type="button"
+	class="swap-button flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-border bg-bg-card text-text-muted transition-colors hover:border-primary hover:text-primary"
+	data-form-id={formId}
+	aria-label="Intercambiar origen y destino"
+>
+	<Icon name="swap" size={18} />
+</button>
+
+<script>
+	document.querySelectorAll('.swap-button').forEach((button) => {
+		button.addEventListener('click', () => {
+			const formId = button.getAttribute('data-form-id');
+			const form = formId ? document.getElementById(formId) : null;
+			if (!(form instanceof HTMLFormElement)) return;
+
+			const originHidden = form.querySelector('[data-slug-hidden="origin"]');
+			const destHidden = form.querySelector('[data-slug-hidden="destination"]');
+			const originText = form.querySelector('[data-slug-input="origin"]');
+			const destText = form.querySelector('[data-slug-input="destination"]');
+
+			if (
+				!(originHidden instanceof HTMLInputElement) ||
+				!(destHidden instanceof HTMLInputElement) ||
+				!(originText instanceof HTMLInputElement) ||
+				!(destText instanceof HTMLInputElement)
+			) {
+				return;
+			}
+
+			const tempSlug = originHidden.value;
+			const tempText = originText.value;
+			originHidden.value = destHidden.value;
+			originText.value = destText.value;
+			destHidden.value = tempSlug;
+			destText.value = tempText;
+		});
+	});
+</script>

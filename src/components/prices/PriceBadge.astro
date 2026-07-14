@@ -1,0 +1,28 @@
+---
+interface Props {
+	amount: number;
+	size?: 'sm' | 'lg';
+	currency?: string;
+}
+
+const { amount, size = 'sm', currency = 'BOB' } = Astro.props;
+
+const formatted = new Intl.NumberFormat('es-BO', {
+	minimumFractionDigits: 0,
+	maximumFractionDigits: 0,
+}).format(amount);
+
+const prefix = currency === 'BOB' ? 'Bs.' : currency;
+---
+
+{
+	size === 'lg' ? (
+		<span class="text-xl font-bold text-text">
+			{prefix} {formatted}
+		</span>
+	) : (
+		<span class="text-sm font-semibold text-price">
+			{prefix} {formatted}
+		</span>
+	)
+}

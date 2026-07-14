@@ -1,17 +1,86 @@
 ---
+import AlertBanner from '../components/ui/AlertBanner.astro';
+import DatePriceCarousel from '../components/prices/DatePriceCarousel.astro';
+import OperatorRow from '../components/prices/OperatorRow.astro';
+import PriceChart from '../components/prices/PriceChart.astro';
+import SearchBar from '../components/search/SearchBar.astro';
+import { getCityName, isValidCitySlug } from '../lib/cities';
+import {
+	getLatestFetch,
+	getOperatorsForDate,
+	getPriceHistory,
+} from '../lib/prices';
+import BaseLayout from '../layouts/BaseLayout.astro';
 
+const defaultOrigin = 'santa-cruz';
+const defaultDestination = 'tarija';
+const defaultDate = new Date().toISOString().slice(0, 10);
+
+const originParam = Astro.url.searchParams.get('origin') ?? defaultOrigin;
+const destinationParam = Astro.url.searchParams.get('destination') ?? defaultDestination;
+const dateParam = Astro.url.searchParams.get('date') ?? defaultDate;
+
+const origin = isValidCitySlug(originParam) ? originParam : defaultOrigin;
+const destination = isValidCitySlug(destinationParam) ? destinationParam : defaultDestination;
+const date = /^\d{4}-\d{2}-\d{2}$/.test(dateParam) ? dateParam : defaultDate;
+
+const history = getPriceHistory(origin, destination, 30);
+const operators = getOperatorsForDate(origin, destination, date);
+const latestFetch = getLatestFetch(origin, destination);
+
+const lastUpdated = latestFetch
+	? new Intl.DateTimeFormat('es-BO', {
+			dateStyle: 'medium',
+			timeStyle: 'short',
+		}).format(new Date(latestFetch))
+	: null;
+
+const pageTitle = `${getCityName(origin)} → ${getCityName(destination)} | BusTrackerBo`;
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={pageTitle}>
+	<section class="mb-8">
+		<h1 class="mb-2 text-2xl font-semibold text-text md:text-3xl">Precios de buses en Bolivia</h1>
+		<p class="text-text-muted">
+			Busca una ruta y compara el historial de precios mínimos por día.
+		</p>
+	</section>
+
+	<section class="mb-6">
+		<SearchBar origin={origin} destination={destination} date={date} />
+	</section>
+
+	<AlertBanner message="Los precios pueden variar según operador y disponibilidad. Datos actualizados diariamente." />
+
+	<section class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+		<div>
+			<h2 class="text-lg font-semibold text-text">
+				{getCityName(origin)} → {getCityName(destination)}
+			</h2>
+			{
+				lastUpdated && (
+					<p class="text-sm text-text-muted">Actualizado {lastUpdated}</p>
+				)
+			}
+		</div>
+	</section>
+
+	<DatePriceCarousel origin={origin} destination={destination} selectedDate={date} />
+
+	<PriceChart history={history} highlightDate={date} />
+
+	{
+		operators.length > 0 && (
+			<section class="mt-8">
+				<h3 class="mb-4 text-lg font-semibold text-text">
+					Operadores para {new Intl.DateTimeFormat('es-BO', { dateStyle: 'long' }).format(new Date(`${date}T12:00:00`))}
+				</h3>
+				<div class="flex flex-col gap-3">
+					{operators.map((operator) => (
+						<OperatorRow operator={operator.name} price={operator.price} />
+					))}
+				</div>
+			</section>
+		)
+	}
+</BaseLayout>

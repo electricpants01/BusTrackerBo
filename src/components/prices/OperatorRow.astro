@@ -1,0 +1,32 @@
+---
+import Card from '../ui/Card.astro';
+
+interface Props {
+	operator: string;
+	price: number;
+	duration?: string;
+	departureTime?: string;
+}
+
+const { operator, price, duration, departureTime } = Astro.props;
+---
+
+<Card padding="sm" class="flex items-center justify-between gap-4">
+	<div class="min-w-0">
+		<p class="truncate font-semibold text-text">{operator}</p>
+		{
+			(duration || departureTime) && (
+				<p class="mt-1 text-sm text-text-muted">
+					{departureTime}
+					{departureTime && duration ? ' · ' : ''}
+					{duration}
+				</p>
+			)
+		}
+	</div>
+	<div class="shrink-0 rounded-md bg-primary px-4 py-2 text-white">
+		<span class="text-lg font-bold">
+			Bs. {new Intl.NumberFormat('es-BO', { maximumFractionDigits: 0 }).format(price)}
+		</span>
+	</div>
+</Card>

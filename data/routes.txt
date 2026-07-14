@@ -1,0 +1,5 @@
+santa-cruz	tarija
+santa-cruz	la-paz
+la-paz	cochabamba
+cochabamba	santa-cruz
+la-paz	sucre

@@ -1,0 +1,33 @@
+:root {
+	--color-primary: #0075eb;
+	--color-primary-hover: #0060c4;
+	--color-price: #e8750a;
+	--color-bg-page: #f5f8fc;
+	--color-bg-card: #ffffff;
+	--color-border: #e2e8f0;
+	--color-text: #1a202c;
+	--color-text-muted: #718096;
+	--color-banner-info: #ebf8ff;
+	--radius-lg: 12px;
+	--radius-md: 8px;
+	--radius-pill: 9999px;
+	--shadow-card: 0 2px 8px rgba(0, 0, 0, 0.08);
+	--font-sans: Inter, system-ui, -apple-system, sans-serif;
+}
+
+@theme {
+	--color-primary: var(--color-primary);
+	--color-primary-hover: var(--color-primary-hover);
+	--color-price: var(--color-price);
+	--color-bg-page: var(--color-bg-page);
+	--color-bg-card: var(--color-bg-card);
+	--color-border: var(--color-border);
+	--color-text: var(--color-text);
+	--color-text-muted: var(--color-text-muted);
+	--color-banner-info: var(--color-banner-info);
+	--radius-lg: var(--radius-lg);
+	--radius-md: var(--radius-md);
+	--radius-pill: var(--radius-pill);
+	--shadow-card: var(--shadow-card);
+	--font-sans: var(--font-sans);
+}

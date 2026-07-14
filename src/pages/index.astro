@@ -10,11 +10,15 @@ import {
 	getOperatorsForDate,
 	getPriceHistory,
 } from '../lib/prices';
+import { tomorrowIsoDate } from '../lib/dates';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const defaultOrigin = 'santa-cruz';
-const defaultDestination = 'tarija';
-const defaultDate = new Date().toISOString().slice(0, 10);
+/** SSR so ?origin=&destination=&date= query params resolve against live prices.txt */
+export const prerender = false;
+
+const defaultOrigin = 'la-paz';
+const defaultDestination = 'uyuni';
+const defaultDate = tomorrowIsoDate();
 
 const originParam = Astro.url.searchParams.get('origin') ?? defaultOrigin;
 const destinationParam = Astro.url.searchParams.get('destination') ?? defaultDestination;
@@ -50,7 +54,7 @@ const pageTitle = `${getCityName(origin)} → ${getCityName(destination)} | BusT
 		<SearchBar origin={origin} destination={destination} date={date} />
 	</section>
 
-	<AlertBanner message="Los precios provienen de sitios web de operadores y agregadores. Si no hay datos para una ruta, el operador no publicó disponibilidad en línea." />
+	<AlertBanner message="Precios publicados en sitios web de operadores y guías de Tickets Bolivia. Son referenciales («desde») y pueden variar por fecha y disponibilidad." />
 
 	<section class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
 		<div>

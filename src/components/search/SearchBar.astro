@@ -5,6 +5,8 @@ import Icon from '../ui/Icon.astro';
 import CityCombobox from './CityCombobox.astro';
 import DatePicker from './DatePicker.astro';
 import SwapButton from './SwapButton.astro';
+import { CITIES } from '../../lib/cities';
+import { tomorrowIsoDate } from '../../lib/dates';
 
 interface Props {
 	origin?: string;
@@ -14,11 +16,13 @@ interface Props {
 }
 
 const {
-	origin = 'santa-cruz',
-	destination = 'tarija',
-	date = new Date().toISOString().slice(0, 10),
+	origin = 'la-paz',
+	destination = 'uyuni',
+	date = tomorrowIsoDate(),
 	action = '/',
 } = Astro.props;
+
+const citySlugs = CITIES.map((city) => city.slug);
 ---
 
 <Card elevated padding="sm" class="relative z-20 overflow-visible p-0">
@@ -37,29 +41,114 @@ const {
 			<DatePicker value={date} />
 		</div>
 		<div class="border-t border-border p-3 lg:border-t-0 lg:p-2">
-			<Button type="submit" class="h-full w-full min-h-12 lg:min-w-36">
+			<Button type="submit" variant="primary" class="h-full w-full min-h-12 lg:min-w-36">
 				<Icon name="search" size={18} />
 				Buscar
 			</Button>
 		</div>
+		<p
+			id="search-form-error"
+			class="hidden border-t border-border px-4 py-2 text-sm text-red-600"
+			role="alert"
+		></p>
 	</form>
 </Card>
 
-<script>
-	import { getSlugFromName } from '../../lib/cities';
+<script define:vars={{ cities: CITIES, validSlugs: citySlugs }}>
+	const form = document.getElementById('search-form');
+	const errorEl = document.getElementById('search-form-error');
+	const validSlugSet = new Set(validSlugs);
 
-	function syncAllSlugs(form) {
-		form.querySelectorAll('[data-slug-input]').forEach((textInput) => {
-			const key = textInput.getAttribute('data-slug-input');
-			const hiddenInput = form.querySelector(`[data-slug-hidden="${key}"]`);
-			if (!(textInput instanceof HTMLInputElement) || !(hiddenInput instanceof HTMLInputElement)) return;
-			const slug = getSlugFromName(textInput.value.trim());
-			hiddenInput.value = slug ?? textInput.value.trim().toLowerCase().replace(/\s+/g, '-');
-		});
+	function normalize(value) {
+		return value
+			.trim()
+			.toLowerCase()
+			.normalize('NFD')
+			.replace(/\p{M}/gu, '');
 	}
 
-	document.getElementById('search-form')?.addEventListener('submit', (event) => {
-		const form = event.target;
-		if (form instanceof HTMLFormElement) syncAllSlugs(form);
-	});
+	function resolveSlug(text) {
+		const trimmed = text.trim();
+		if (!trimmed) return undefined;
+
+		const exact = cities.find((city) => city.name === trimmed);
+		if (exact) return exact.slug;
+
+		const normalized = normalize(trimmed);
+		const normalizedMatch = cities.find((city) => normalize(city.name) === normalized);
+		if (normalizedMatch) return normalizedMatch.slug;
+
+		const partialMatches = cities.filter((city) => normalize(city.name).includes(normalized));
+		if (partialMatches.length === 1) return partialMatches[0].slug;
+
+		return undefined;
+	}
+
+	function syncField(formEl, fieldName) {
+		const textInput = formEl.querySelector(`[data-slug-input="${fieldName}"]`);
+		const hiddenInput = formEl.querySelector(`[data-slug-hidden="${fieldName}"]`);
+		if (!(textInput instanceof HTMLInputElement) || !(hiddenInput instanceof HTMLInputElement)) {
+			return undefined;
+		}
+
+		const slug = resolveSlug(textInput.value);
+		if (slug) {
+			hiddenInput.value = slug;
+			textInput.value = cities.find((city) => city.slug === slug)?.name ?? textInput.value;
+			textInput.setCustomValidity('');
+			return slug;
+		}
+
+		hiddenInput.value = '';
+		textInput.setCustomValidity('Selecciona una ciudad de la lista.');
+		return undefined;
+	}
+
+	function hideError() {
+		if (!(errorEl instanceof HTMLElement)) return;
+		errorEl.textContent = '';
+		errorEl.classList.add('hidden');
+	}
+
+	function showError(message) {
+		if (!(errorEl instanceof HTMLElement)) return;
+		errorEl.textContent = message;
+		errorEl.classList.remove('hidden');
+	}
+
+	function syncAllFields(formEl) {
+		const origin = syncField(formEl, 'origin');
+		const destination = syncField(formEl, 'destination');
+		return { origin, destination };
+	}
+
+	if (form instanceof HTMLFormElement) {
+		form.addEventListener('input', hideError);
+
+		form.addEventListener('submit', (event) => {
+			const { origin, destination } = syncAllFields(form);
+
+			if (!origin || !validSlugSet.has(origin)) {
+				event.preventDefault();
+				showError('Elige un origen válido de la lista.');
+				form.querySelector('[data-slug-input="origin"]')?.focus();
+				return;
+			}
+
+			if (!destination || !validSlugSet.has(destination)) {
+				event.preventDefault();
+				showError('Elige un destino válido de la lista.');
+				form.querySelector('[data-slug-input="destination"]')?.focus();
+				return;
+			}
+
+			if (origin === destination) {
+				event.preventDefault();
+				showError('El origen y el destino deben ser distintos.');
+				return;
+			}
+
+			hideError();
+		});
+	}
 </script>

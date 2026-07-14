@@ -55,9 +55,8 @@ Note: fetch-prices.mjs scrapes Tickets Bolivia (ticketsbolivia) — no mock fall
 
 [x] data/cities.json — single source of truth for city slugs + Tickets Bolivia IDs
 [x] search/CityCombobox.astro — shows all cities on focus (replaces datalist CityInput)
-[x] scripts/sources/ticketsbolivia.mjs — real website scraper
-[x] scripts/lib/routes.mjs — 72 bidirectional routes (9 cities × 8 directions)
-[ ] Add more operator source adapters (SAMA, Trans Copacabana, etc.)
+[x] scripts/sources/ticketsbolivia-travel.mjs — travel guide pages (reference prices)
+[ ] Add more operator source adapters (SAMA, Trans Copacabana direct sites)
 
 ────────────────────────────────────────────────────────────
 PHASE 5 — Polish & deploy

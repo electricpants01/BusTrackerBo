@@ -149,9 +149,10 @@ export function getOperatorsForDate(
 		.sort((a, b) => a.price - b.price);
 }
 
-export function getUpcomingDates(daysAhead: number, fromDate = new Date()): string[] {
+export function getUpcomingDates(daysAhead: number, fromDate = new Date(), startOffsetDays = 0): string[] {
 	const dates: string[] = [];
 	const cursor = new Date(fromDate);
+	cursor.setDate(cursor.getDate() + startOffsetDays);
 
 	for (let i = 0; i < daysAhead; i += 1) {
 		dates.push(cursor.toISOString().slice(0, 10));

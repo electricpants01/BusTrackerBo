@@ -9,10 +9,16 @@ import { appendPriceRows } from './lib/prices-file.mjs';
 import { readRoutesFile, syncBidirectionalRoutesFile } from './lib/routes.mjs';
 import { sleep } from './lib/http.mjs';
 import { fetchTicketsBoliviaRoute, SOURCE_TAG as TICKETS_BOLIVIA_SOURCE } from './sources/ticketsbolivia.mjs';
+import {
+	fetchTicketsBoliviaTravelRoute,
+	SOURCE_TAG as TICKETS_BOLIVIA_TRAVEL_SOURCE,
+} from './sources/ticketsbolivia-travel.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const rootDir = path.join(__dirname, '..');
 const configPath = path.join(rootDir, 'data/fetch-config.json');
+
+const TRAVEL_SOURCES = new Set(['ticketsbolivia-travel']);
 
 function loadConfig() {
 	return JSON.parse(fs.readFileSync(configPath, 'utf-8'));
@@ -38,18 +44,52 @@ function parseArgs(argv) {
 	return options;
 }
 
-async function fetchFromSource(sourceName, origin, destination, travelDate, config) {
+function sourceTag(sourceName) {
+	if (sourceName === 'ticketsbolivia') return TICKETS_BOLIVIA_SOURCE;
+	if (sourceName === 'ticketsbolivia-travel') return TICKETS_BOLIVIA_TRAVEL_SOURCE;
+	return sourceName;
+}
+
+function rowsForDates(fetchedAt, origin, destination, dates, operatorRows, sourceName) {
+	const tag = sourceTag(sourceName);
+	const rows = [];
+	for (const travelDate of dates) {
+		for (const row of operatorRows) {
+			rows.push([
+				fetchedAt,
+				origin,
+				destination,
+				travelDate,
+				row.operator,
+				row.priceBob,
+				'BOB',
+				tag,
+			]);
+		}
+	}
+	return rows;
+}
+
+async function fetchLiveSource(sourceName, origin, destination, travelDate, config) {
 	if (sourceName === 'ticketsbolivia') {
 		return fetchTicketsBoliviaRoute(origin, destination, travelDate, config);
 	}
-	return { rows: [], error: `Unknown source: ${sourceName}` };
+	return { rows: [], error: `Unknown live source: ${sourceName}` };
 }
 
 async function main() {
 	const cli = parseArgs(process.argv.slice(2));
 	const config = loadConfig();
-	const daysAhead = cli.daysAhead ?? config.daysAhead ?? 14;
+	const daysAhead = cli.daysAhead ?? config.daysAhead ?? 1;
 	const fetchedAt = utcTimestamp();
+	const sources = config.sources ?? ['ticketsbolivia-travel'];
+	const dates = upcomingIsoDates(daysAhead);
+	const travelDate = dates[0];
+
+	if (!travelDate) {
+		console.error('Could not determine target travel date.');
+		process.exit(1);
+	}
 
 	if (cli.syncRoutes) {
 		const routes = syncBidirectionalRoutesFile();
@@ -65,38 +105,52 @@ async function main() {
 		routes = routes.slice(0, routeLimit);
 	}
 
-	const dates = upcomingIsoDates(daysAhead);
+	console.log(
+		`Fetching ${routes.length} routes from ${sources.join(', ')} for travel date ${travelDate}…`,
+	);
+
 	let totalRows = 0;
 	const errors = [];
-
-	console.log(`Fetching ${routes.length} routes × ${dates.length} days from ${config.sources?.join(', ') ?? 'ticketsbolivia'}…`);
 
 	for (const [routeIndex, { origin, destination }] of routes.entries()) {
 		const routeRows = [];
 
-		for (const travelDate of dates) {
-			for (const sourceName of config.sources ?? ['ticketsbolivia']) {
-				const result = await fetchFromSource(sourceName, origin, destination, travelDate, config);
+		for (const sourceName of sources) {
+			if (TRAVEL_SOURCES.has(sourceName)) {
+				const result = await fetchTicketsBoliviaTravelRoute(origin, destination, config);
+				if (result.error) {
+					errors.push(`${origin} → ${destination}: ${result.error}`);
+				}
+
+				if (result.rows.length > 0) {
+					const rows = rowsForDates(
+						fetchedAt,
+						origin,
+						destination,
+						[travelDate],
+						result.rows,
+						sourceName,
+					);
+					routeRows.push(...rows);
+					console.log(
+						`  ✓ ${origin} → ${destination} (travel): ${result.rows.length} operator(s)`,
+					);
+				}
+				continue;
+			}
+
+			for (const travelDateLive of dates) {
+				const result = await fetchLiveSource(sourceName, origin, destination, travelDateLive, config);
 				if (result.error) {
 					errors.push(result.error);
 				}
 
-				for (const row of result.rows) {
-					routeRows.push([
-						fetchedAt,
-						origin,
-						destination,
-						travelDate,
-						row.operator,
-						row.priceBob,
-						'BOB',
-						sourceName === 'ticketsbolivia' ? TICKETS_BOLIVIA_SOURCE : sourceName,
-					]);
-				}
-
 				if (result.rows.length > 0) {
+					routeRows.push(
+						...rowsForDates(fetchedAt, origin, destination, [travelDateLive], result.rows, sourceName),
+					);
 					console.log(
-						`  ✓ ${origin} → ${destination} ${travelDate}: ${result.rows.length} price(s)`,
+						`  ✓ ${origin} → ${destination} ${travelDateLive}: ${result.rows.length} price(s)`,
 					);
 				}
 			}
@@ -130,7 +184,7 @@ async function main() {
 		return;
 	}
 
-	console.log(`Done. Appended ${totalRows} real rows from ${config.sources?.join(', ') ?? 'ticketsbolivia'}`);
+	console.log(`Done. Appended ${totalRows} real rows from ${sources.join(', ')}`);
 }
 
 main().catch((error) => {

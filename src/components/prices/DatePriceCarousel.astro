@@ -16,7 +16,7 @@ const {
 	daysAhead = 7,
 } = Astro.props;
 
-const dates = getUpcomingDates(daysAhead);
+const dates = getUpcomingDates(daysAhead, new Date(), 1);
 
 function formatWeekday(date: string): string {
 	return new Intl.DateTimeFormat('es-BO', { weekday: 'short' }).format(new Date(`${date}T12:00:00`));

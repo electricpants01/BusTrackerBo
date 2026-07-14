@@ -46,14 +46,16 @@ GitHub Actions workflow `fetch-prices.yml` runs:
 
 ```text
 Read data/routes.txt
+  travel_date = tomorrow (daysAhead: 1)
   For each origin → destination pair:
-    Fetch prices for travel_date in [today+1 .. today+14]
-    For each operator/price returned:
-      Build row: fetched_at, slugs, travel_date, operator, price_bob, BOB, source
-      Append to data/prices.txt (in memory first)
-Write all new rows to end of file
+    For each enabled source (ticketsbolivia-travel, …):
+      Fetch all operators/prices for that route
+      Build one row per operator for travel_date
+      Append to data/prices.txt
 Log: routes processed, rows appended, errors
 ```
+
+Each daily cron run adds a **new snapshot** (new `fetched_at`, new `travel_date` = that day's tomorrow). History accumulates via append — no need to fetch 14 days in one run.
 
 **Error handling**:
 

@@ -27,8 +27,9 @@ function formatDay(date: string): string {
 }
 
 function buildHref(date: string): string {
-	const params = new URLSearchParams({ origin, destination, date });
-	return `/?${params.toString()}`;
+	const base = import.meta.env.BASE_URL;
+	const params = new URLSearchParams({ date });
+	return `${base}r/${origin}/${destination}/?${params.toString()}`;
 }
 ---
 
@@ -42,6 +43,7 @@ function buildHref(date: string): string {
 				return (
 					<a
 						href={buildHref(date)}
+						data-carousel-date={date}
 						class:list={[
 							'flex min-w-20 flex-col items-center rounded-t-lg px-4 py-3 transition-colors',
 							isSelected

@@ -1,0 +1,30 @@
+---
+import RouteResults from '../../../components/route/RouteResults.astro';
+import { isValidCitySlug } from '../../../lib/cities';
+import { tomorrowIsoDate } from '../../../lib/dates';
+
+export async function getStaticPaths() {
+	const { getAllCitySlugs } = await import('../../../lib/cities');
+	const slugs = getAllCitySlugs();
+	const paths = [];
+
+	for (const origin of slugs) {
+		for (const destination of slugs) {
+			if (origin === destination) continue;
+			paths.push({ params: { origin, destination } });
+		}
+	}
+
+	return paths;
+}
+
+const { origin, destination } = Astro.params;
+
+if (!origin || !destination || !isValidCitySlug(origin) || !isValidCitySlug(destination)) {
+	return Astro.redirect(`${import.meta.env.BASE_URL}r/la-paz/uyuni/`);
+}
+
+const date = tomorrowIsoDate();
+---
+
+<RouteResults origin={origin} destination={destination} date={date} />

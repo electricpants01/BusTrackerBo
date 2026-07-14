@@ -58,7 +58,7 @@ Workflow [`.github/workflows/fetch-prices.yml`](.github/workflows/fetch-prices.y
 | **Automatic** | Every **Monday** at 06:00 UTC (~02:00 Bolivia) |
 | **Manual** | Actions → **Fetch Prices** → **Run workflow** |
 
-Each run commits updates to `data/prices.txt` when rows change.
+Each run commits updates to `data/prices.txt` when rows change. That commit to `main` also redeploys GitHub Pages.
 
 ## Local development
 
@@ -75,11 +75,32 @@ Example URL with query params:
 http://localhost:4321/?origin=la-paz&destination=uyuni&date=2026-07-15
 ```
 
-The home page uses **SSR** (`@astrojs/node`) so search params resolve against live `prices.txt`.
+The home page uses **static generation** (72 route pages + GitHub Pages). Prices are baked in at build time from `data/prices.txt`.
 
 ```bash
 npm run build
 npm run preview
+```
+
+### GitHub Pages
+
+The site deploys automatically on push to `main` via [`.github/workflows/deploy-pages.yml`](.github/workflows/deploy-pages.yml).
+
+**One-time setup in your GitHub repo:**
+
+1. Go to **Settings → Pages**
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**
+3. Push to `main` (or run the **Deploy GitHub Pages** workflow manually)
+4. Open `https://<your-username>.github.io/<repo-name>/`
+
+Example: `https://octocat.github.io/BusTrackerBo/r/santa-cruz/tarija/`
+
+**After weekly price fetch:** pushing updated `prices.txt` to `main` triggers a rebuild, so the site shows new data.
+
+**Local dev matching Pages** (if your repo is not at the root URL):
+
+```bash
+BASE_PATH=/BusTrackerBo/ npm run dev
 ```
 
 ## Project structure

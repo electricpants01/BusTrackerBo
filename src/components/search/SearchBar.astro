@@ -12,24 +12,23 @@ interface Props {
 	origin?: string;
 	destination?: string;
 	date?: string;
-	action?: string;
 }
 
 const {
 	origin = 'la-paz',
 	destination = 'uyuni',
 	date = tomorrowIsoDate(),
-	action = '/',
 } = Astro.props;
 
 const citySlugs = CITIES.map((city) => city.slug);
+const formAction = `${import.meta.env.BASE_URL}r/${origin}/${destination}/`;
 ---
 
 <Card elevated padding="sm" class="relative z-20 overflow-visible p-0">
 	<form
 		id="search-form"
 		method="get"
-		action={action}
+		action={formAction}
 		class="flex flex-col overflow-visible lg:flex-row lg:items-stretch lg:divide-x lg:divide-border"
 	>
 		<div class="flex flex-col divide-y divide-border overflow-visible sm:flex-row sm:divide-x sm:divide-y-0 lg:flex-1">
@@ -54,7 +53,7 @@ const citySlugs = CITIES.map((city) => city.slug);
 	</form>
 </Card>
 
-<script define:vars={{ cities: CITIES, validSlugs: citySlugs }}>
+<script define:vars={{ cities: CITIES, validSlugs: citySlugs, baseUrl: import.meta.env.BASE_URL }}>
 	const form = document.getElementById('search-form');
 	const errorEl = document.getElementById('search-form-error');
 	const validSlugSet = new Set(validSlugs);
@@ -148,6 +147,7 @@ const citySlugs = CITIES.map((city) => city.slug);
 				return;
 			}
 
+			form.action = `${baseUrl}r/${origin}/${destination}/`;
 			hideError();
 		});
 	}

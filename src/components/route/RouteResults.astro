@@ -1,0 +1,90 @@
+---
+import AlertBanner from '../ui/AlertBanner.astro';
+import DatePriceCarousel from '../prices/DatePriceCarousel.astro';
+import OperatorRow from '../prices/OperatorRow.astro';
+import PriceChart from '../prices/PriceChart.astro';
+import SearchBar from '../search/SearchBar.astro';
+import { getCityName } from '../../lib/cities';
+import {
+	getLatestFetch,
+	getOperatorsForDate,
+	getPriceHistory,
+} from '../../lib/prices';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+interface Props {
+	origin: string;
+	destination: string;
+	date: string;
+}
+
+const { origin, destination, date } = Astro.props;
+
+const history = getPriceHistory(origin, destination, 30);
+const operators = getOperatorsForDate(origin, destination, date);
+const latestFetch = getLatestFetch(origin, destination);
+
+const lastUpdated = latestFetch
+	? new Intl.DateTimeFormat('es-BO', {
+			dateStyle: 'medium',
+			timeStyle: 'short',
+		}).format(new Date(latestFetch))
+	: null;
+
+const pageTitle = `${getCityName(origin)} → ${getCityName(destination)} | BusTrackerBo`;
+
+const routePayload = JSON.stringify({
+	origin,
+	destination,
+	history,
+});
+---
+
+<BaseLayout title={pageTitle}>
+	<section class="mb-8">
+		<h1 class="mb-2 text-2xl font-semibold text-text md:text-3xl">Precios de buses en Bolivia</h1>
+		<p class="text-text-muted">
+			Busca una ruta y compara el historial de precios mínimos por día.
+		</p>
+	</section>
+
+	<section class="mb-6">
+		<SearchBar origin={origin} destination={destination} date={date} />
+	</section>
+
+	<AlertBanner message="Precios publicados en sitios web de operadores y guías de Tickets Bolivia. Son referenciales («desde») y pueden variar por fecha y disponibilidad." />
+
+	<section class="mb-4 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+		<div>
+			<h2 class="text-lg font-semibold text-text">
+				{getCityName(origin)} → {getCityName(destination)}
+			</h2>
+			{
+				lastUpdated && (
+					<p class="text-sm text-text-muted">Actualizado {lastUpdated}</p>
+				)
+			}
+		</div>
+	</section>
+
+	<DatePriceCarousel origin={origin} destination={destination} selectedDate={date} />
+
+	<PriceChart history={history} highlightDate={date} />
+
+	<section id="operators-section" class="mt-8" hidden={operators.length === 0}>
+		<h3 id="operators-heading" class="mb-4 text-lg font-semibold text-text">
+			Operadores para{' '}
+			{new Intl.DateTimeFormat('es-BO', { dateStyle: 'long' }).format(new Date(`${date}T12:00:00`))}
+		</h3>
+		<div id="operators-list" class="flex flex-col gap-3">
+			{
+				operators.map((operator) => (
+					<OperatorRow operator={operator.name} price={operator.price} />
+				))
+			}
+		</div>
+	</section>
+
+	<script type="application/json" id="route-data" set:html={routePayload} />
+	<script src="./route-results.client.ts" />
+</BaseLayout>

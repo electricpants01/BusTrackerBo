@@ -3752,3 +3752,458 @@
 2026-08-17T06:35:42Z	uyuni	potosi	2026-09-13	Trans ATL Grevalug	70.00	BOB	ticketsbolivia-travel
 2026-08-17T06:35:42Z	uyuni	potosi	2026-09-13	Linea Emperador	80.00	BOB	ticketsbolivia-travel
 2026-08-17T06:35:42Z	uyuni	potosi	2026-09-13	Expreso 11 de Julio	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-14	Transportes el Dorado	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-14	Trans Copacabana S.A.	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-14	Trans Copacabana 1 MEM	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-15	Transportes el Dorado	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-15	Trans Copacabana S.A.	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-15	Trans Copacabana 1 MEM	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-16	Transportes el Dorado	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-16	Trans Copacabana S.A.	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-16	Trans Copacabana 1 MEM	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-17	Transportes el Dorado	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-17	Trans Copacabana S.A.	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-17	Trans Copacabana 1 MEM	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-18	Transportes el Dorado	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-18	Trans Copacabana S.A.	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-18	Trans Copacabana 1 MEM	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-19	Transportes el Dorado	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-19	Trans Copacabana S.A.	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-19	Trans Copacabana 1 MEM	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-20	Transportes el Dorado	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-20	Trans Copacabana S.A.	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	santa-cruz	la-paz	2026-09-20	Trans Copacabana 1 MEM	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-14	Transportes el Dorado	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-14	Trans Copacabana S.A.	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-14	Trans Copacabana 1 MEM	380.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-15	Transportes el Dorado	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-15	Trans Copacabana S.A.	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-15	Trans Copacabana 1 MEM	380.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-16	Transportes el Dorado	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-16	Trans Copacabana S.A.	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-16	Trans Copacabana 1 MEM	380.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-17	Transportes el Dorado	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-17	Trans Copacabana S.A.	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-17	Trans Copacabana 1 MEM	380.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-18	Transportes el Dorado	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-18	Trans Copacabana S.A.	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-18	Trans Copacabana 1 MEM	380.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-19	Transportes el Dorado	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-19	Trans Copacabana S.A.	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-19	Trans Copacabana 1 MEM	380.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-20	Transportes el Dorado	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-20	Trans Copacabana S.A.	360.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	santa-cruz	2026-09-20	Trans Copacabana 1 MEM	380.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-14	Transportes el Dorado	290.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-14	Trans Copacabana S.A.	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-14	Trans Copacabana 1 MEM	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-14	Flota Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-14	6 de Octubre	240.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-15	Transportes el Dorado	290.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-15	Trans Copacabana S.A.	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-15	Trans Copacabana 1 MEM	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-15	Flota Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-15	6 de Octubre	240.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-16	Transportes el Dorado	290.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-16	Trans Copacabana S.A.	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-16	Trans Copacabana 1 MEM	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-16	Flota Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-16	6 de Octubre	240.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-17	Transportes el Dorado	290.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-17	Trans Copacabana S.A.	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-17	Trans Copacabana 1 MEM	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-17	Flota Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-17	6 de Octubre	240.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-18	Transportes el Dorado	290.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-18	Trans Copacabana S.A.	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-18	Trans Copacabana 1 MEM	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-18	Flota Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-18	6 de Octubre	240.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-19	Transportes el Dorado	290.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-19	Trans Copacabana S.A.	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-19	Trans Copacabana 1 MEM	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-19	Flota Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-19	6 de Octubre	240.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-20	Transportes el Dorado	290.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-20	Trans Copacabana S.A.	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-20	Trans Copacabana 1 MEM	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-20	Flota Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	sucre	2026-09-20	6 de Octubre	240.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-14	Transportes el Dorado	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-14	Trans Copacabana S.A.	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-14	Trans Copacabana 1 MEM	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-14	Linea Emperador	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-15	Transportes el Dorado	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-15	Trans Copacabana S.A.	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-15	Trans Copacabana 1 MEM	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-15	Linea Emperador	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-16	Transportes el Dorado	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-16	Trans Copacabana S.A.	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-16	Trans Copacabana 1 MEM	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-16	Linea Emperador	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-17	Transportes el Dorado	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-17	Trans Copacabana S.A.	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-17	Trans Copacabana 1 MEM	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-17	Linea Emperador	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-18	Transportes el Dorado	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-18	Trans Copacabana S.A.	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-18	Trans Copacabana 1 MEM	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-18	Linea Emperador	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-19	Transportes el Dorado	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-19	Trans Copacabana S.A.	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-19	Trans Copacabana 1 MEM	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-19	Linea Emperador	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-20	Transportes el Dorado	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-20	Trans Copacabana S.A.	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-20	Trans Copacabana 1 MEM	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	potosi	2026-09-20	Linea Emperador	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-14	Trans Omar	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-14	Todo Turismo	330.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-14	Panasur	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-14	Cruz del Norte	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-15	Trans Omar	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-15	Todo Turismo	330.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-15	Panasur	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-15	Cruz del Norte	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-16	Trans Omar	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-16	Todo Turismo	330.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-16	Panasur	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-16	Cruz del Norte	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-17	Trans Omar	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-17	Todo Turismo	330.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-17	Panasur	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-17	Cruz del Norte	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-18	Trans Omar	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-18	Todo Turismo	330.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-18	Panasur	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-18	Cruz del Norte	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-19	Trans Omar	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-19	Todo Turismo	330.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-19	Panasur	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-19	Cruz del Norte	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-20	Trans Omar	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-20	Todo Turismo	330.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-20	Panasur	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	la-paz	uyuni	2026-09-20	Cruz del Norte	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-14	Transportes el Dorado	190.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-14	Trans Copacabana S.A.	170.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-14	Trans Copacabana 1 MEM	190.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-14	Flota Bolivia	160.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-15	Transportes el Dorado	190.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-15	Trans Copacabana S.A.	170.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-15	Trans Copacabana 1 MEM	190.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-15	Flota Bolivia	160.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-16	Transportes el Dorado	190.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-16	Trans Copacabana S.A.	170.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-16	Trans Copacabana 1 MEM	190.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-16	Flota Bolivia	160.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-17	Transportes el Dorado	190.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-17	Trans Copacabana S.A.	170.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-17	Trans Copacabana 1 MEM	190.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-17	Flota Bolivia	160.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-18	Transportes el Dorado	190.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-18	Trans Copacabana S.A.	170.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-18	Trans Copacabana 1 MEM	190.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-18	Flota Bolivia	160.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-19	Transportes el Dorado	190.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-19	Trans Copacabana S.A.	170.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-19	Trans Copacabana 1 MEM	190.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-19	Flota Bolivia	160.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-20	Transportes el Dorado	190.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-20	Trans Copacabana S.A.	170.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-20	Trans Copacabana 1 MEM	190.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	cochabamba	la-paz	2026-09-20	Flota Bolivia	160.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-14	Transportes Sama	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-14	Trans Copacabana S.A.	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-14	Lince SRL	310.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-15	Transportes Sama	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-15	Trans Copacabana S.A.	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-15	Lince SRL	310.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-16	Transportes Sama	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-16	Trans Copacabana S.A.	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-16	Lince SRL	310.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-17	Transportes Sama	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-17	Trans Copacabana S.A.	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-17	Lince SRL	310.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-18	Transportes Sama	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-18	Trans Copacabana S.A.	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-18	Lince SRL	310.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-19	Transportes Sama	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-19	Trans Copacabana S.A.	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-19	Lince SRL	310.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-20	Transportes Sama	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-20	Trans Copacabana S.A.	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	santa-cruz	2026-09-20	Lince SRL	310.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-14	Transportes Sama	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-14	Trans Copacabana S.A.	350.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-14	Buses Royal Bolivia	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-15	Transportes Sama	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-15	Trans Copacabana S.A.	350.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-15	Buses Royal Bolivia	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-16	Transportes Sama	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-16	Trans Copacabana S.A.	350.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-16	Buses Royal Bolivia	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-17	Transportes Sama	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-17	Trans Copacabana S.A.	350.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-17	Buses Royal Bolivia	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-18	Transportes Sama	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-18	Trans Copacabana S.A.	350.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-18	Buses Royal Bolivia	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-19	Transportes Sama	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-19	Trans Copacabana S.A.	350.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-19	Buses Royal Bolivia	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-20	Transportes Sama	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-20	Trans Copacabana S.A.	350.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	tarija	la-paz	2026-09-20	Buses Royal Bolivia	340.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-14	Transportes el Dorado	290.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-14	Trans Copacabana S.A.	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-14	Trans Copacabana 1 MEM	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-14	Flota Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-14	Expreso Tequila	170.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-14	6 de Octubre	240.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-15	Transportes el Dorado	290.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-15	Trans Copacabana S.A.	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-15	Trans Copacabana 1 MEM	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-15	Flota Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-15	Expreso Tequila	170.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-15	6 de Octubre	240.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-16	Transportes el Dorado	290.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-16	Trans Copacabana S.A.	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-16	Trans Copacabana 1 MEM	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-16	Flota Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-16	Expreso Tequila	170.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-16	6 de Octubre	240.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-17	Transportes el Dorado	290.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-17	Trans Copacabana S.A.	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-17	Trans Copacabana 1 MEM	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-17	Flota Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-17	Expreso Tequila	170.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-17	6 de Octubre	240.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-18	Transportes el Dorado	290.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-18	Trans Copacabana S.A.	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-18	Trans Copacabana 1 MEM	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-18	Flota Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-18	Expreso Tequila	170.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-18	6 de Octubre	240.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-19	Transportes el Dorado	290.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-19	Trans Copacabana S.A.	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-19	Trans Copacabana 1 MEM	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-19	Flota Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-19	Expreso Tequila	170.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-19	6 de Octubre	240.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-20	Transportes el Dorado	290.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-20	Trans Copacabana S.A.	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-20	Trans Copacabana 1 MEM	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-20	Flota Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-20	Expreso Tequila	170.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	la-paz	2026-09-20	6 de Octubre	240.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	potosi	2026-09-14	Transtin Dil Rey	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	potosi	2026-09-14	Trans Emperador	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	potosi	2026-09-15	Transtin Dil Rey	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	potosi	2026-09-15	Trans Emperador	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	potosi	2026-09-16	Transtin Dil Rey	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	potosi	2026-09-16	Trans Emperador	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	potosi	2026-09-17	Transtin Dil Rey	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	potosi	2026-09-17	Trans Emperador	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	potosi	2026-09-18	Transtin Dil Rey	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	potosi	2026-09-18	Trans Emperador	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	potosi	2026-09-19	Transtin Dil Rey	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	potosi	2026-09-19	Trans Emperador	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	potosi	2026-09-20	Transtin Dil Rey	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	potosi	2026-09-20	Trans Emperador	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-14	Exp. 11 de Julio	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-14	Autobuses Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-14	6 de Octubre	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-15	Exp. 11 de Julio	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-15	Autobuses Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-15	6 de Octubre	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-16	Exp. 11 de Julio	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-16	Autobuses Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-16	6 de Octubre	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-17	Exp. 11 de Julio	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-17	Autobuses Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-17	6 de Octubre	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-18	Exp. 11 de Julio	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-18	Autobuses Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-18	6 de Octubre	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-19	Exp. 11 de Julio	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-19	Autobuses Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-19	6 de Octubre	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-20	Exp. 11 de Julio	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-20	Autobuses Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	sucre	uyuni	2026-09-20	6 de Octubre	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-14	Trans Aroma	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-14	Pullman Bolivia	60.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-14	Flota Urus	60.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-15	Trans Aroma	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-15	Pullman Bolivia	60.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-15	Flota Urus	60.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-16	Trans Aroma	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-16	Pullman Bolivia	60.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-16	Flota Urus	60.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-17	Trans Aroma	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-17	Pullman Bolivia	60.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-17	Flota Urus	60.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-18	Trans Aroma	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-18	Pullman Bolivia	60.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-18	Flota Urus	60.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-19	Trans Aroma	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-19	Pullman Bolivia	60.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-19	Flota Urus	60.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-20	Trans Aroma	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-20	Pullman Bolivia	60.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	oruro	la-paz	2026-09-20	Flota Urus	60.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-14	Transportes el Dorado	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-14	Trans Copacabana S.A.	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-14	Trans Copacabana 1 MEM	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-14	Linea Emperador	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-15	Transportes el Dorado	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-15	Trans Copacabana S.A.	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-15	Trans Copacabana 1 MEM	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-15	Linea Emperador	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-16	Transportes el Dorado	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-16	Trans Copacabana S.A.	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-16	Trans Copacabana 1 MEM	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-16	Linea Emperador	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-17	Transportes el Dorado	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-17	Trans Copacabana S.A.	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-17	Trans Copacabana 1 MEM	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-17	Linea Emperador	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-18	Transportes el Dorado	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-18	Trans Copacabana S.A.	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-18	Trans Copacabana 1 MEM	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-18	Linea Emperador	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-19	Transportes el Dorado	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-19	Trans Copacabana S.A.	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-19	Trans Copacabana 1 MEM	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-19	Linea Emperador	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-20	Transportes el Dorado	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-20	Trans Copacabana S.A.	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-20	Trans Copacabana 1 MEM	230.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	la-paz	2026-09-20	Linea Emperador	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	sucre	2026-09-14	Transtin Dil Rey	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	sucre	2026-09-14	Trans Emperador	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	sucre	2026-09-15	Transtin Dil Rey	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	sucre	2026-09-15	Trans Emperador	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	sucre	2026-09-16	Transtin Dil Rey	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	sucre	2026-09-16	Trans Emperador	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	sucre	2026-09-17	Transtin Dil Rey	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	sucre	2026-09-17	Trans Emperador	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	sucre	2026-09-18	Transtin Dil Rey	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	sucre	2026-09-18	Trans Emperador	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	sucre	2026-09-19	Transtin Dil Rey	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	sucre	2026-09-19	Trans Emperador	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	sucre	2026-09-20	Transtin Dil Rey	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	potosi	sucre	2026-09-20	Trans Emperador	50.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-14	Trans Titicaca	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-14	Trans Omar	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-14	Todo Turismo	330.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-14	Panasur	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-14	Flota Arequipa	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-14	Cruz del Norte	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-14	Cisne Bus Uyuni	270.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-14	Autobuses Emperador	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-14	25 de Diciembre Uyuni	140.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-15	Trans Titicaca	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-15	Trans Omar	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-15	Todo Turismo	330.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-15	Panasur	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-15	Flota Arequipa	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-15	Cruz del Norte	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-15	Cisne Bus Uyuni	270.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-15	Autobuses Emperador	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-15	25 de Diciembre Uyuni	140.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-16	Trans Titicaca	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-16	Trans Omar	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-16	Todo Turismo	330.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-16	Panasur	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-16	Flota Arequipa	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-16	Cruz del Norte	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-16	Cisne Bus Uyuni	270.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-16	Autobuses Emperador	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-16	25 de Diciembre Uyuni	140.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-17	Trans Titicaca	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-17	Trans Omar	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-17	Todo Turismo	330.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-17	Panasur	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-17	Flota Arequipa	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-17	Cruz del Norte	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-17	Cisne Bus Uyuni	270.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-17	Autobuses Emperador	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-17	25 de Diciembre Uyuni	140.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-18	Trans Titicaca	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-18	Trans Omar	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-18	Todo Turismo	330.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-18	Panasur	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-18	Flota Arequipa	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-18	Cruz del Norte	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-18	Cisne Bus Uyuni	270.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-18	Autobuses Emperador	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-18	25 de Diciembre Uyuni	140.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-19	Trans Titicaca	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-19	Trans Omar	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-19	Todo Turismo	330.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-19	Panasur	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-19	Flota Arequipa	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-19	Cruz del Norte	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-19	Cisne Bus Uyuni	270.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-19	Autobuses Emperador	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-19	25 de Diciembre Uyuni	140.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-20	Trans Titicaca	280.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-20	Trans Omar	150.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-20	Todo Turismo	330.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-20	Panasur	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-20	Flota Arequipa	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-20	Cruz del Norte	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-20	Cisne Bus Uyuni	270.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-20	Autobuses Emperador	210.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	la-paz	2026-09-20	25 de Diciembre Uyuni	140.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	sucre	2026-09-14	Exp. 11 de Julio	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	sucre	2026-09-14	Autobuses Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	sucre	2026-09-15	Exp. 11 de Julio	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	sucre	2026-09-15	Autobuses Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	sucre	2026-09-16	Exp. 11 de Julio	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	sucre	2026-09-16	Autobuses Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	sucre	2026-09-17	Exp. 11 de Julio	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	sucre	2026-09-17	Autobuses Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	sucre	2026-09-18	Exp. 11 de Julio	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	sucre	2026-09-18	Autobuses Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	sucre	2026-09-19	Exp. 11 de Julio	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	sucre	2026-09-19	Autobuses Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	sucre	2026-09-20	Exp. 11 de Julio	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	sucre	2026-09-20	Autobuses Emperador	180.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-14	Trans Turismo ZC American	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-14	Trans Quijarro	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-14	Trans ATL Grevalug	70.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-14	Linea Emperador	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-14	Expreso 11 de Julio	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-15	Trans Turismo ZC American	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-15	Trans Quijarro	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-15	Trans ATL Grevalug	70.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-15	Linea Emperador	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-15	Expreso 11 de Julio	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-16	Trans Turismo ZC American	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-16	Trans Quijarro	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-16	Trans ATL Grevalug	70.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-16	Linea Emperador	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-16	Expreso 11 de Julio	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-17	Trans Turismo ZC American	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-17	Trans Quijarro	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-17	Trans ATL Grevalug	70.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-17	Linea Emperador	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-17	Expreso 11 de Julio	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-18	Trans Turismo ZC American	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-18	Trans Quijarro	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-18	Trans ATL Grevalug	70.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-18	Linea Emperador	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-18	Expreso 11 de Julio	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-19	Trans Turismo ZC American	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-19	Trans Quijarro	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-19	Trans ATL Grevalug	70.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-19	Linea Emperador	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-19	Expreso 11 de Julio	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-20	Trans Turismo ZC American	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-20	Trans Quijarro	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-20	Trans ATL Grevalug	70.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-20	Linea Emperador	80.00	BOB	ticketsbolivia-travel
+2026-08-24T06:38:18Z	uyuni	potosi	2026-09-20	Expreso 11 de Julio	80.00	BOB	ticketsbolivia-travel
